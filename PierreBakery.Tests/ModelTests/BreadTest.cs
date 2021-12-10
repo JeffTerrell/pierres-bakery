@@ -12,12 +12,13 @@ namespace PierreBakery.Tests
     public void BreadConstructor_CreatesInstanceOfBread_Item()
     {
       //Arrange/Act
-      Bread newOrder = new Bread();
+      Bread newOrder = new Bread(1);
 
       //Assert
       Assert.AreEqual(typeof(Bread), newOrder.GetType());
     }
 
+    [TestMethod]
     public void GetBreadOrder_ReturnValueOfBreadOrder_Int()
     {
       //Arrange
