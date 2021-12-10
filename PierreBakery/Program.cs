@@ -18,6 +18,29 @@ class Program
       Console.WriteLine("How many loaves? (max: 3)");
       int userBreadAmount = int.Parse(Console.ReadLine());
     }
+      else
+      {
+        Console.WriteLine("Would you like to order pastries? (yes/no)");
+        string userPastry = Console.ReadLine().ToLower();
+        if (userPastry == "yes")
+        {
+          Console.WriteLine("How many pastries? (max: 6)");
+          int userPastryAmount = int.Parse(Console.ReadLine());
+        }
+          else
+          {
+            Console.WriteLine("Return to 'main menu' or 'exit'? (main/exit)");
+            string userEnd = Console.ReadLine().ToLower();
+            if (userEnd == "main")
+            {
+              Main();
+            }
+              else
+              {
+                Environment.Exit(0);
+              }
+          }
+      }
     Main();
   }
 }
