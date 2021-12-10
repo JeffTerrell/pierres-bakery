@@ -68,7 +68,7 @@ namespace PierreBakery.Tests
       //Arrange
       int testAmount = 3;
       Pastry newOrder = new Pastry(testAmount);
-      int expectedAmount = 6;
+      int expectedAmount = 5;
 
       //Act
       int orderAmount = newOrder.GetPastryTotal();
