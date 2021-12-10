@@ -20,6 +20,10 @@ namespace PierreBakery.Models
         {
           pastryOrderTotal += PastryOrder + 2;
         }
+        else if (PastryOrder == 4)
+        {
+          pastryOrderTotal += PastryOrder + 3;
+        }
       return pastryOrderTotal;
     }
   }
