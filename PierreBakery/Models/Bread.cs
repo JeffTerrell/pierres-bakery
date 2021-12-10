@@ -6,7 +6,7 @@ namespace PierreBakery.Models
     public int BreadOrder { get; set;}
     public Bread()
     {
-
+      
     }
   }
 }
