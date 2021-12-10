@@ -69,6 +69,8 @@ class Program
           {
             Console.WriteLine("Return to 'main menu' or 'exit'? (main/exit)");
             string userEnd = Console.ReadLine().ToLower();
+            if (userEnd != "main" || userEnd != "exit")
+            Console.WriteLine("Invalid response, exiting program...");
             if (userEnd == "main")
             {
               Main();
