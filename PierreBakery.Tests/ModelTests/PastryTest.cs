@@ -38,12 +38,13 @@ namespace PierreBakery.Tests
       //Arrange
       int testAmount = 1;
       Pastry newOrder = new Pastry(testAmount);
+      int expectedAmount = 2;
 
       //Act
       int orderAmount = newOrder.GetPastryTotal();
 
       //Assert
-      Assert.AreEqual(testAmount, orderAmount);
+      Assert.AreEqual(expectedAmount, orderAmount);
     }
   }
 }
