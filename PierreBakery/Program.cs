@@ -17,6 +17,9 @@ class Program
     {
       Console.WriteLine("How many loaves? (max: 3)");
       int userBreadAmount = int.Parse(Console.ReadLine());
+      Bread userBreadOrder = new Bread(userBreadAmount);
+      Console.WriteLine($"{userBreadAmount} loaves of bread added"); 
+      Console.WriteLine($"Sub total: {userBreadOrder.GetBreadTotal()}");
     }
       else
       {
