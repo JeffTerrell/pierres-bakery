@@ -18,10 +18,12 @@ class Program
       Console.WriteLine("How many loaves? (max: 3)");
       int userBreadAmount = int.Parse(Console.ReadLine());
       Bread userBreadOrder = new Bread(userBreadAmount);
-      Console.WriteLine($"{userBreadAmount} loaves of bread added"); 
-      Console.WriteLine($"Sub total: ${userBreadOrder.GetBreadTotal()}");
+      if (userBreadAmount == 1 || userBreadAmount == 2 || userBreadAmount == 3)
+        {
+        Console.WriteLine($"{userBreadAmount} loaves of bread added"); 
+        Console.WriteLine($"Sub total: ${userBreadOrder.GetBreadTotal()}");
 
-      Console.WriteLine("Would you like to order pastries? (yes/no)");
+        Console.WriteLine("Would you like to order pastries? (yes/no)");
         string userPastry = Console.ReadLine().ToLower();
         if (userPastry == "yes")
         {
@@ -44,6 +46,8 @@ class Program
         }
           else
           {
+            Console.WriteLine($"Order total: ${userBreadOrder.GetBreadTotal()}");
+            Console.WriteLine("Order number: PB-0056");
             Console.WriteLine("Return to 'main menu' or 'exit'? (main/exit)");
             string userEnd = Console.ReadLine().ToLower();
             if (userEnd == "main")
@@ -55,8 +59,14 @@ class Program
                 Environment.Exit(0);
               }
           }
-    }      
+      }
       else
+      {
+        Console.WriteLine("Invalid response, returning to 'main menu'");
+        Console.WriteLine("-------------------------------------------");
+      }  
+    }      
+      else if (userBread == "no")
       {
         Console.WriteLine("Would you like to order pastries? (yes/no)");
         string userPastry = Console.ReadLine().ToLower();
@@ -80,6 +90,10 @@ class Program
                 Environment.Exit(0);
               }
           }
+      }
+      else
+      {
+        Console.WriteLine("Invalid response, returning to 'main menu'");
       }
     Main();
   }
