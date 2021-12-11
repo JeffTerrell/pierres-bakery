@@ -33,6 +33,7 @@ class Program
           Console.WriteLine($"{userPastryAmount} pastries added");
           Console.WriteLine($"Sub total: ${userPastryOrder.GetPastryTotal()}");
           Console.WriteLine($"Order total: ${userBreadOrder.GetBreadTotal() + userPastryOrder.GetPastryTotal()}");
+          Console.WriteLine("Order number: PB-0056");
           Console.WriteLine("Return to 'main menu' or 'exit'? (main/exit)");
           string userEnd = Console.ReadLine().ToLower();
           if (userEnd == "main")
@@ -94,6 +95,7 @@ class Program
       else
       {
         Console.WriteLine("Invalid response, returning to 'main menu'");
+        Console.WriteLine("-------------------------------------------");
       }
     Main();
   }
