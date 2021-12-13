@@ -17,9 +17,13 @@ namespace PierreBakery.Models
       {
         breadOrderTotal += BreadOrder * 5;
       }
-        else 
+        else if (BreadOrder == 3)
         {
           breadOrderTotal += ((BreadOrder - 1) * 5);
+        }
+        else
+        {
+          breadOrderTotal = -1;
         }
       return breadOrderTotal;
     }
